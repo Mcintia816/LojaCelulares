@@ -1,6 +1,7 @@
+package ufpb.dcx.br;
 import java.util.Objects;
 
-public class Celular {
+public class  Celular {
     private String codigo;
     private String marca;
     private String modelo;
@@ -59,11 +60,7 @@ public class Celular {
 
     @Override
     public String toString() {
-        return "Celular{" +
-                "codigo='" + codigo + '\'' +
-                ", marca='" + marca + '\'' +
-                ", modelo='" + modelo + '\'' +
-                ", preco=" + preco +
-                '}';
+        return "Celular de codigo: " + getCodigo() + "Marca: " + getMarca() + "Modelo: " + getModelo() + "Preço: " + getPreco();
+
     }
 }

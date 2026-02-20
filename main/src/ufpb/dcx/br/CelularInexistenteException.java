@@ -1,3 +1,4 @@
+package ufpb.dcx.br;
 import java.io.IOException;
 
 public class CelularInexistenteException extends IOException {
