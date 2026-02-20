@@ -7,10 +7,10 @@ public class  Celular {
     private String modelo;
     private double preco;
 
-    public Celular(String codigo, String modelo, String marca, double preco) {
+    public Celular(String codigo, String marca, String modelo, double preco) {
         this.codigo = codigo;
-        this.modelo = modelo;
         this.marca = marca;
+        this.modelo = modelo;
         this.preco = preco;
     }
 
@@ -31,7 +31,7 @@ public class  Celular {
     }
 
     public String getModelo() {
-        return modelo;
+        return this.modelo;
     }
 
     public void setModelo(String modelo) {
@@ -39,7 +39,7 @@ public class  Celular {
     }
 
     public String getMarca() {
-        return marca;
+        return this.marca;
     }
 
     public void setMarca(String marca) {

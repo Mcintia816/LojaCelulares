@@ -20,7 +20,7 @@ public class LojaDeCelularTest {
 
         try {
             Celular c = loja.pesquisaCelular("123");
-            assertEquals("Samsung", c.getMarca());
+            assertEquals("S23", c.getModelo());
         } catch (CelularInexistenteException e) {
             fail("Não deveria lançar exceção");
         }
