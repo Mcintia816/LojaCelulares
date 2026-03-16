@@ -1,13 +1,20 @@
-package ufpb.dcx.br;
+//
+// Source code recreated from a .class file by IntelliJ IDEA
+// (powered by FernFlower decompiler)
+//
+
+package LojaDeCelulares;
+
 import java.util.Objects;
 
-public class  Celular {
+public class Celular {
     private String codigo;
     private String marca;
     private String modelo;
     private double preco;
+    private int QuantUnidades;
 
-    public Celular(String codigo, String marca, String modelo, double preco) {
+    public Celular(String codigo, String marca, String modelo, double preco, int quantUnidades) {
         this.codigo = codigo;
         this.marca = marca;
         this.modelo = modelo;
@@ -15,7 +22,7 @@ public class  Celular {
     }
 
     public String getCodigo() {
-        return codigo;
+        return this.codigo;
     }
 
     public void setCodigo(String codigo) {
@@ -23,7 +30,7 @@ public class  Celular {
     }
 
     public double getPreco() {
-        return preco;
+        return this.preco;
     }
 
     public void setPreco(double preco) {
@@ -42,25 +49,33 @@ public class  Celular {
         return this.marca;
     }
 
+    public int getQuantUnidades() {
+        return this.QuantUnidades;
+    }
+
+    public void setQuantUnidades(int quantUnidades) {
+        this.QuantUnidades = quantUnidades;
+    }
+
     public void setMarca(String marca) {
         this.marca = marca;
     }
 
-    @Override
     public boolean equals(Object o) {
-        if (o == null || getClass() != o.getClass()) return false;
-        Celular celular = (Celular) o;
-        return Double.compare(preco, celular.preco) == 0 && Objects.equals(codigo, celular.codigo) && Objects.equals(marca, celular.marca) && Objects.equals(modelo, celular.modelo);
+        if (o != null && this.getClass() == o.getClass()) {
+            Celular celular = (Celular)o;
+            return Double.compare(this.preco, celular.preco) == 0 && Objects.equals(this.codigo, celular.codigo) && Objects.equals(this.marca, celular.marca) && Objects.equals(this.modelo, celular.modelo);
+        } else {
+            return false;
+        }
     }
 
-    @Override
     public int hashCode() {
-        return Objects.hash(codigo, marca, modelo, preco);
+        return Objects.hash(new Object[]{this.codigo, this.marca, this.modelo, this.preco});
     }
 
-    @Override
     public String toString() {
-        return "Celular de codigo: " + getCodigo() + "Marca: " + getMarca() + "Modelo: " + getModelo() + "Preço: " + getPreco();
-
+        String var10000 = this.getCodigo();
+        return "Celular de codigo: " + var10000 + "Marca: " + this.getMarca() + "Modelo: " + this.getModelo() + "Preço: " + this.getPreco();
     }
 }
